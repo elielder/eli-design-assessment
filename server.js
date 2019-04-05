@@ -12,14 +12,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'client', 'build')));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
-
 console.log('just checking');
-mongoose.connect(process.env.MONGODB_URI);// || 'mongodb://127.0.0.1:27017/colors', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/colors', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', () => {
@@ -43,8 +37,13 @@ colorRoutes.route('/').get((req, res) => {
 //setup hex route
 //setup color routes
 
-
 app.use('/colors', colorRoutes);
+
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log("Server is running on Port: " + PORT);

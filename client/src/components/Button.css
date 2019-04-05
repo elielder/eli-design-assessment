@@ -1,4 +1,3 @@
-@import '../variables.scss';
 
 .Button {
     background: white;
@@ -8,5 +7,5 @@
     justify-content: center;
     align-content: center;
     font-weight: bold;
-    padding: $standard-spacing $standard-spacing * 3;
+    padding: 8px 24px;
 }

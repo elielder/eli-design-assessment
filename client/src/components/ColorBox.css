@@ -1,17 +1,15 @@
-@import '../variables.scss';
-
 .ColorBox {
     width: 21%;
     height: 200px;
-    box-shadow: $box-shadow;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin: $standard-spacing * 2;
+    margin: 16px;
 
     .ColorBox-color {
         align-self: center;
-        margin-top: $standard-spacing;
+        margin-top: 8px;
         width: 95%;
         height: 80%;
         border-radius: 5px 5px 0px 0px;
@@ -19,6 +17,6 @@
 
     .ColorBox-label {
         display: flex;
-        padding: $standard-spacing $standard-spacing * 3;
+        padding: 8px 24px;
     }
 }

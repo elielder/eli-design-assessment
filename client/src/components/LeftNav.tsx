@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Button from './Button';
-import './LeftNav.scss';
+import './LeftNav.css';
 import { Link } from 'react-router-dom';
 
 interface Props {

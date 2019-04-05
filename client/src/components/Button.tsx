@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import './Button.scss';
+import './Button.css';
 
 interface Props {
     label: string;

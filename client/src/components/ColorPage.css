@@ -1,9 +1,8 @@
-@import '../variables.scss';
 
 .ColorPage {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    padding: $standard-spacing * 4 $standard-spacing * 2;
+    padding: 32px 24px;
 }

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { checkPropTypes } from "prop-types";
 import * as PropTypes from "prop-types";
-import './ColorBox.scss';
+import './ColorBox.css';
 
 interface Props {
     colorCode: string;

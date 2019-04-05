@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import ColorBox from "./ColorBox";
-import './ColorPage.scss';
+import './ColorPage.css';
 
 interface Props {
 

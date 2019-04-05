@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import './SearchBox.scss';
+import './SearchBox.css';
 
 interface Props {
 

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import * as PropTypes from 'prop-types';
 import SearchBox from './SearchBox';
-import './Header.scss'
+import './Header.css'
 
 interface Props {
     title: string;

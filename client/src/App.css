@@ -5,7 +5,7 @@
   width: 100vw;
 }
 
-.App.App-body{
+.App .App-body{
     display: flex;
     height: 100%;
   }

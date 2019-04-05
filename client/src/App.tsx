@@ -29,7 +29,7 @@ class App extends Component<Props, State> {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/colors/')
+    axios.get('/colors/')
       .then((res) => {
         this.setState({
           colors: res.data

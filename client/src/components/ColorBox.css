@@ -6,17 +6,17 @@
     display: flex;
     flex-direction: column;
     margin: 16px;
+}
 
-    .ColorBox-color {
+.ColorBox-color {
         align-self: center;
         margin-top: 8px;
         width: 95%;
         height: 80%;
         border-radius: 5px 5px 0px 0px;
-    }
+}
 
-    .ColorBox-label {
+.ColorBox-label {
         display: flex;
         padding: 8px 24px;
-    }
 }

@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
+}
 
-  .App-body{
+.App.App-body{
     display: flex;
     height: 100%;
   }
-}

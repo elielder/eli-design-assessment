@@ -1,8 +1,7 @@
 .SearchBox {
     display: flex;
     align-items: 100%;
-
-    input {
+}
+    .SearchBox input {
         border-radius: 5px;
     }
-}

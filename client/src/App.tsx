@@ -12,6 +12,8 @@ interface Props {
 }
 interface State {
   colors?: Color[];
+  color?: Color;
+  type?: Color[];
 }
 
 export interface Color {
@@ -24,7 +26,9 @@ class App extends Component<Props, State> {
     super(props);
 
     this.state = {
-      colors: undefined
+      colors: undefined,
+      color: undefined,
+      type: undefined
     }
   }
 
@@ -35,7 +39,27 @@ class App extends Component<Props, State> {
         this.setState({
           colors: res.data
         })
-        console.log('res', res.data)
+        console.log('res all', res.data)
+      })
+      .catch(err => console.log('err', err));
+
+    axios.get('/colors/hex/%23FFFFFF')
+      .then((res) => {
+        console.log(res)
+        this.setState({
+          color: res.data
+        })
+        console.log('res one', res.data)
+      })
+      .catch(err => console.log('err', err));
+
+      axios.get('/colors/type/red')
+      .then((res) => {
+        console.log(res)
+        this.setState({
+          type: res.data
+        })
+        console.log('res type', res.data)
       })
       .catch(err => console.log('err', err));
   }
@@ -49,7 +73,8 @@ class App extends Component<Props, State> {
             <LeftNav />
             <ColorPage />
             <div>
-              {this.state.colors? this.state.colors.length : 5}
+              {this.state.colors ? this.state.colors.length : 5}
+              {/* {this.state.color ? this.state.color : 'gggg'} */}
             </div>
           </div>
         </div>

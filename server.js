@@ -9,10 +9,9 @@ const PORT = process.env.PORT || 4000;
 const Color = require('./color.model');
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-console.log('just checking');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/colors', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
@@ -28,13 +27,31 @@ colorRoutes.route('/').get((req, res) => {
             console.log(err);
         } else {
             res.json(colors);
-            console.log('server res', colors)
-          }
+        }
     });
 });
 
-//setup hex route
-//setup color routes
+colorRoutes.route('/hex/:hexCode').get((req, res) => {
+    const hex = req.params.hexCode;
+    Color.find({ hexCode: hex }, (err, colors) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(colors);
+        }
+    });
+});
+
+colorRoutes.route('/type/:colorType').get((req, res) => {
+    const type = req.params.colorType;
+    Color.find({ colorType: type }, (err, colors) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(colors);
+        }
+    });
+});
 
 app.use('/colors', colorRoutes);
 

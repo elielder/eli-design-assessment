@@ -32,6 +32,8 @@ colorRoutes.route('/').get((req, res) => {
             console.log(err);
         } else {
             res.json(colors);
+            console.log('server res', colors)
+            console.log('server res2', res.json(colors))
         }
     });
 });

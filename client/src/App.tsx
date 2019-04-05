@@ -29,7 +29,7 @@ class App extends Component<Props, State> {
   }
 
   componentDidMount() {
-    axios.get('/colors/')
+    axios.get('/colors')
       .then((res) => {
         this.setState({
           colors: res.data

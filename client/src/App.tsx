@@ -31,13 +31,13 @@ class App extends Component<Props, State> {
   componentDidMount() {
     axios.get('/colors')
       .then((res) => {
+        console.log(res)
         this.setState({
           colors: res.data
         })
         console.log('res', res.data)
       })
-
-      .catch(err => console.log(err));
+      .catch(err => console.log('err', err));
   }
 
   render() {

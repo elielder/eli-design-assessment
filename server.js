@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 4000;
 const Color = require('./color.model');
 
 app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
@@ -17,7 +18,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/colors', { useNewUrlParser: true });
+console.log('just checking');
+mongoose.connect(process.env.MONGODB_URI);// || 'mongodb://127.0.0.1:27017/colors', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', () => {

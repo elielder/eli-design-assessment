@@ -1,0 +1,24 @@
+@import '../variables.scss';
+
+.ColorBox {
+    width: 21%;
+    height: 200px;
+    box-shadow: $box-shadow;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: $standard-spacing * 2;
+
+    .ColorBox-color {
+        align-self: center;
+        margin-top: $standard-spacing;
+        width: 95%;
+        height: 80%;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .ColorBox-label {
+        display: flex;
+        padding: $standard-spacing $standard-spacing * 3;
+    }
+}

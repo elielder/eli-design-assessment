@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.Header {
+    background: #363c3c;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $standard-spacing * 3;
+    box-shadow: $box-shadow;
+
+    .Header-left {
+        .Header-left-title {
+            color: white;
+        }
+    }
+}

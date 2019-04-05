@@ -1,0 +1,19 @@
+@import '../variables.scss';
+
+.LeftNav {
+    background: #d6d8d8;
+    height: 100vh;
+    width: 275px;
+    text-align: left;
+    font-size: 20px;
+    box-shadow: $box-shadow;
+
+    .Button {
+        margin: $standard-spacing * 5 $standard-spacing * 2;
+        width: 10rem;
+    }
+
+    .LeftNav-colorLink {
+        margin: $standard-spacing $standard-spacing * 2;
+    }
+}

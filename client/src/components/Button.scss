@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.Button {
+    background: white;
+    border: black solid 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    padding: $standard-spacing $standard-spacing * 3;
+}

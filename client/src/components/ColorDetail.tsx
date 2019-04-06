@@ -3,6 +3,7 @@ import { Color } from "../App";
 import ColorBox from "./ColorBox";
 import * as PropTypes from "prop-types";
 import './ColorDetail.css';
+import Button from "./Button";
 
 
 interface Props {
@@ -20,6 +21,10 @@ class ColorDetail extends PureComponent<Props> {
                 <div className='ColorDetail-focused'>
                     <ColorBox hexCode={this.props.color.hexCode} />
                 </div>
+                <Button
+                    label='Clear'
+                    link='/'
+                />
             </div>
         )
     }

@@ -28,7 +28,7 @@ class Pagination extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
-        const pageCount = Math.floor(this.props.colors.length / this.props.pageSize);
+        const pageCount = Math.ceil(this.props.colors.length / this.props.pageSize);
         this.state = {
             page: this.props.defaultPage,
             pageCount: pageCount,
@@ -45,6 +45,13 @@ class Pagination extends Component<Props, State> {
     componentDidUpdate(prevProps: Props) {
         if (this.props.colors !== prevProps.colors) {
             this.setPage(this.props.defaultPage);
+
+
+            const pageCount = Math.ceil(this.props.colors.length / this.props.pageSize);
+
+            this.setState({
+                pages: Array.from(Array(pageCount).keys()).map(index => index + 1)
+            })
         }
     }
 
@@ -54,7 +61,7 @@ class Pagination extends Component<Props, State> {
         const pageIndex = page - 1;
 
         const newPageColors = colors.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
-        
+        console.log(pageIndex * pageSize, (pageIndex + 1) * this.props.pageSize)
         this.setState({
             page: page
         });

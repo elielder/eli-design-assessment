@@ -7,7 +7,7 @@
 
 .App .App-body{
     display: flex;
-    height: 100%;
+    height: calc(100vh - 75px);
   }
 
 a {

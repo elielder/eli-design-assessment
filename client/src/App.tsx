@@ -23,7 +23,7 @@ class App extends Component<Props> {
     return (
       <Router>
         <div className="App">
-          <Header title='New Engen' />
+          <Header title='COLORS!' />
           <div className='App-body'>
             <LeftNav />
             <Body />

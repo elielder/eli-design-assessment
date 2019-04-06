@@ -9,8 +9,14 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
-.Header-left.Header-left-title {
+.Header-left .Header-left-title {
+    height: 5%;
+    width: 5;
+}
+
+.Header-left .Header-left-title {
     color: white;
+    font-size: 32px;
 }
 
 .Header-right{

@@ -16,9 +16,6 @@ class Header extends PureComponent<Props> {
         return (
             <div className='Header'>
                 <div className='Header-left'>
-                    <div className='Header-left-logo'>
-
-                    </div>
                     <div className='Header-left-title'>
                         {this.props.title}
                     </div>

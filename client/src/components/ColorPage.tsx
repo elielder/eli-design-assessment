@@ -24,16 +24,6 @@ class ColorPage extends React.Component<Props, State> {
         this.state = {
             colorsOnPage: []
         }
-
-    }
-
-    presentColors() {
-        return this.props.colors.map((color, index) => {
-            return <ColorBox
-                key={index}
-                hexCode={color.hexCode}
-            />
-        });
     }
 
     onChangePage = (newPageColors: Color[]) => {
@@ -54,7 +44,6 @@ class ColorPage extends React.Component<Props, State> {
                     colors={this.props.colors}
                     onChangePage={this.onChangePage}
                 />
-                {this.presentColors()}
             </div>
         )
     }

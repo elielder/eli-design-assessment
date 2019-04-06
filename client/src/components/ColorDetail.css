@@ -1,11 +1,15 @@
 
 .ColorDetail {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 .ColorDetail .ColorDetail-focused {
-    height: 100%;
+    height: 80%;
+    width: 95%;
 }
 
 .ColorDetail .ColorDetail-focused .ColorBox-box {
@@ -26,4 +30,13 @@
 
 .ColorDetail .ColorDetail-focused .ColorBox .ColorBox-label {
     padding: 24px 24px 0px;
+}
+
+.ColorDetail a {
+    padding-top: 48px;
+}
+.ColorDetail a .Button {
+    justify-self: center;
+    width: 10rem;
+    padding: 16px;
 }

@@ -9,3 +9,4 @@ Image near the heading
 Color Detail with the lower boxes, unsure the intent of those  
 Padding on showing multiple colors  
 Tests, all of them  
+Directories, put stuff in them...

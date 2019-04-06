@@ -1,28 +1,37 @@
 import React, { PureComponent } from "react";
-import { checkPropTypes } from "prop-types";
 import * as PropTypes from "prop-types";
 import './ColorBox.css';
+import { Link } from "react-router-dom";
 
 interface Props {
-    colorCode: string;
+    hexCode: string;
 }
 
 class ColorBox extends PureComponent<Props> {
     static propTypes = {
-        colorCode: PropTypes.string.isRequired,
+        hexCode: PropTypes.string.isRequired,
     }
 
     render() {
+        const hexUpperCase = this.props.hexCode.toUpperCase();
+        const hexNoPound = hexUpperCase.slice(1);
+        const hexLowerCase = this.props.hexCode.toLowerCase();
+
         return (
-            <div className='ColorBox'>
-                <div
-                    className='ColorBox-color'
-                    style={{background:this.props.colorCode}}
-                />
-                <div className='ColorBox-label'>
-                    {this.props.colorCode}
+            <Link
+                className='ColorBox'
+                to={'/detail/' + hexNoPound}
+            >
+                <div className='ColorBox-box'>
+                    <div
+                        className='ColorBox-color'
+                        style={{ background: this.props.hexCode }}
+                    />
+                    <div className='ColorBox-label'>
+                        {hexLowerCase}
+                    </div>
                 </div>
-            </div>
+            </Link>
         )
     }
 }

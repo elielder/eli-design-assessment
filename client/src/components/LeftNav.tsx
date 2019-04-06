@@ -3,42 +3,67 @@ import Button from './Button';
 import './LeftNav.css';
 import { Link } from 'react-router-dom';
 
-interface Props {
+interface Props { }
 
+interface State {
+    randomColor: string;
 }
 
-class LeftNav extends PureComponent {
+const colors = [
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'purple',
+    'brown',
+    'gray',
+];
+
+class LeftNav extends PureComponent<Props, State> {
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+            randomColor: this.randomColor(),
+        }
+    }
+    colorLinks = () => {
+        return colors.map((color) => {
+            return (
+                <div key={color}>
+                    <Link
+                        className='LeftNav-colorLink'
+                        to={'/color/' + color}
+                    >
+                        {color.charAt(0).toUpperCase() + color.slice(1)}
+                    </Link >
+                </div>
+
+            )
+        });
+    }
+
+    randomColor = (): string => {
+        const randomColorIndex = Math.floor(Math.random() * colors.length);
+        return '/color/' + colors[randomColorIndex]
+    }
+
+    handleClick = () => {
+        this.setState({
+            randomColor: this.randomColor(),
+        })
+    }
+
     render() {
         return (
             <div className='LeftNav'>
                 <Button
                     label='Random Color'
-                    link=''
+                    link={this.state.randomColor}
+                    onClick={this.handleClick}
                 />
-                <div className='LeftNav-colorLink'>
-                    Red
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Orange
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Yellow
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Green
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Blue
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Purple
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Brown
-                </div>
-                <div className='LeftNav-colorLink'>
-                    Gray
-                </div>
+                {this.colorLinks()}
             </div>
         )
     }

@@ -1,0 +1,29 @@
+
+.ColorDetail {
+    padding: 24px;
+    width: 100%;
+}
+
+.ColorDetail .ColorDetail-focused {
+    height: 100%;
+}
+
+.ColorDetail .ColorDetail-focused .ColorBox-box {
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+}
+
+.ColorDetail .ColorDetail-focused .ColorBox .ColorBox-color {
+    width: 100%;
+    margin: 0;
+}
+
+.ColorDetail .ColorDetail-focused .ColorBox .ColorBox-label {
+    padding: 24px 24px 0px;
+}

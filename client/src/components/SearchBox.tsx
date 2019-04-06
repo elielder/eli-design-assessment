@@ -9,7 +9,7 @@ class SearchBox extends PureComponent {
     render() {
         return (
             <div className='SearchBox'>
-                <input />
+                <input placeholder='Search'/>
             </div>
         )
     }

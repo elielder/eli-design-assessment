@@ -1,8 +1,19 @@
 .SearchBox {
     display: flex;
     align-items: 100%;
+    height: 50%;
+    width: 100%;
 }
-    .SearchBox input {
-        border-radius: 5px;
-        padding-right: 8px;
-    }
+
+.SearchBox input {
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+}
+
+.SearchBox ::placeholder {
+    color: grey;
+    margin: 8px;
+    font-size: 14px;
+}

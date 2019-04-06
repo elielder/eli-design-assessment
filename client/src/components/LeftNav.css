@@ -4,15 +4,17 @@
     width: 275px;
     text-align: left;
     font-size: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
-    .LeftNav .LeftNav.Button {
-        margin:  40px 16px;
-        width: 10rem;
-    }
+.LeftNav .LeftNav.Button {
+    margin:  40px 16px;
+    width: 10rem;
+}
 
-    .LeftNav .LeftNav-colorLink {
-        margin: 8px 16px;
-    }
+.LeftNav .LeftNav-colorLink {
+    text-decoration: none;
+    margin: 8px 16px;
+    color: black;
+}
 
